@@ -10,6 +10,10 @@ while (rotationNumber >= alph.length) {
 }
 
 const encryptedText = textAsArray.map((character) => {
+  if (character === ' ') {
+    return character
+  }
+
   const source = (alph.includes(character) && alph) || (ALPH.includes(character) && ALPH)
   if (source) {
     const letterPosition = source.indexOf(character)
